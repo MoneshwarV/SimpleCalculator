@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>CALCULATOR</title>
+    </head>
+    <script>
+        function Display(val)
+        {
+       var out = document.getElementById('num');
+       out.value+= val;
+       }
+       function Result() {
+        var num1 = document.getElementById('num').value;
+        var num2 = eval(num1);
+        document.getElementById('num').value = num2;
+       }
+       function Clear() {
+        var inp = document.getElementById('num');
+        inp.value = '';
+        }
+    </script>
+    <body>
+        <center>
+        <h2><center><b>CALCULATOR</b></center></h2>
+        <label>
+            <input type="text" placeholder="Enter number " name="textbox" id="num" maxlength="5000" minlength="0" autocomplete="on"/>
+        </label>
+            <br><br>
+            <button id="+" type="button" onclick="Display('+')">+</button>
+            <button id="-" type="button" onclick="Display('-')">-</button>
+            <button id="*" type="button" onclick="Display('*')">*</button>
+            <button id="/" type="button" onclick="Display('/')">/</button>
+            <br><br>
+            <button id="9" type="button" onclick="Display('9')">9</button>
+            <button id="8" type="button" onclick="Display('8')">8</button>
+            <button id="7" type="button" onclick="Display('7')">7</button>
+            <button id="6" type="button" onclick="Display('6')">6</button>
+            <br><br>
+            <button id="5" type="button" onclick="Display('5')">5</button>
+            <button id="4" type="button" onclick="Display('4')">4</button>
+            <button id="3" type="button" onclick="Display('3')">3</button>
+            <button id="2" type="button" onclick="Display('2')">2</button>
+            <br><br>
+            <button id="1" type="button" onclick="Display('1')">1</button>
+            <button id="0" type="button" onclick="Display('0')">0</button>
+            <button id="AC" type="button" onclick="Clear()">AC</button>
+            <button id="=" type="button" onclick="Result()">=</button>
+            
+        </div>
+        </center>
+    </body>
+    <style>
+    button {
+    padding: 10px 15px; 
+    border: none; 
+    cursor: pointer; 
+    } 
+    button:hover { 
+    background-color: #0056b3; 
+    } 
+</style> 
+
+    </style>
+</html>
